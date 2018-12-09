@@ -1,0 +1,441 @@
+/* style.css for itas191 final, valid as of Dec 8 2018 @ 8:24 PM */
+
+
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", sans-serif;
+	font-weight: 400;
+}
+a, a:hover, a:focus, a:active, button, svg, .baguetteBox-button {
+	outline: 0 !important;
+	border: 0;
+	text-decoration: none;
+}
+header {
+	position: fixed;
+	z-index: 99;
+}
+header#header-main {
+	width: 100%;
+}
+	#header-wrap {
+		max-width: 1140px;
+		margin: 0 auto;
+		display: flex;
+	}
+		#logo {
+			width: 50%;
+			padding: 1em 0;
+		}
+			#logo a {
+				color: #1b1b1b;
+				font-size: 1.4em;
+			}
+				#logo a span {
+					font-weight: 800;
+				}
+		.header-bg-on {
+			background: rgba(27,27,27,1);
+			transition: background .2s ease-in-out,
+						color .2s ease-in-out;
+		}
+			.header-bg-on #logo a {
+				color: #cecece;
+			}
+				.header-bg-on #logo a {
+					color: #fff;
+				}
+			.header-bg-on nav a {
+				color: #cecece;
+			}
+				.header-bg-on nav a:hover {
+					color: #fff;
+				}
+		.header-bg-off {
+			background: rgba(27,27,27,0);
+			transition: background .2s ease-in-out,
+						color .2s ease-in-out;
+		}
+
+		nav {
+			width: 50%;
+			text-align: right;
+			padding: 1.2em 0 1em 0;
+		}
+			nav a {
+				color: #1b1b1b;
+				text-transform: lowercase;
+				font-weight: 800;
+				font-size: 1em;
+				padding: 0 0 0 1em;
+			}
+				nav a:hover {
+					color: #000;
+				}
+/* carousel customizations*/
+#caro, #carousel {
+	max-height: 50em;
+	overflow: hidden;
+}
+	#caro img {
+		width: 100%;
+		height: auto;
+	}
+	#slogan {
+		text-align: justify;
+		height: 100%;
+		width: 500px;
+		position: absolute;
+	}
+	#slogan h1 {
+		font-family: "Nunito";
+		font-weight: 800;
+		text-shadow: rgba(255,255,255,.4) 0 3px 0;
+		text-transform: uppercase;
+	}
+main {
+	background: #1b1b1b;
+}
+	#feat {
+		min-height: 200px;
+		max-width: 1140px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		padding: 10em 0;
+	}
+			.feat-item {
+				width: 30%;
+			}
+				#feat div h2 {
+					color: #dedede;
+					font-weight: 600;
+					padding: 0 0 5px 0;
+				}
+				#feat div p, #about-right p {
+					color: #858585;
+					padding: 15px 0 0 0;
+				}
+					#feat div div, #about-right div, .redBar {
+						height: 5px;
+						width: 60px;
+						background: #ed4949;
+					}
+	#work {
+		background: #cecece;
+		min-height: 200px;
+		padding: 0 0 10em 0;
+	}
+		#work-wrap {
+			width: 1140px;
+			margin: 0 auto;
+		}
+		#work h2 {
+			text-align: center;
+			padding: 4em 0 1em 0;
+			font-weight: 600;
+			font-size: 2em;
+		}
+			#work h2 span {
+				padding: 0 0 10px 0;
+				border-bottom: 5px solid #ed4949;
+			}
+			#work .row {
+				margin: 0 0 2em 0;
+			}
+/* START special CSS for baguetteBox gallery */
+.gallery-block {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.gallery-block .heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gallery-block.cards-gallery h6 {
+    font-size: 1.4em;
+    font-weight: 600; 
+}
+
+/* syncing all transitions */
+.gallery-block.cards-gallery .card,
+.gallery-block.cards-gallery .card-body,
+.gallery-block.cards-gallery .card-body a,
+.gallery-block.cards-gallery .card-body p {
+    transition: all 0.2s ease-in-out .1s; /* slight delay for added "weight" */
+}
+
+.gallery-block.cards-gallery .card-body {
+    background: #b4b3b3;
+}
+.gallery-block.cards-gallery .card:hover .card-body {
+	background: #ed4949;
+}
+.gallery-block.cards-gallery .card:hover a {
+	color: #fbc0c0;
+}
+.gallery-block.cards-gallery .card:hover .card-text,
+.gallery-block.cards-gallery .card:hover .text-muted {
+	color: #fce3e3 !important; /* bootstrap keeps overriding me >:( */
+}
+.gallery-block.cards-gallery a {
+    color: #1b1b1b;
+}
+.cards-gallery a span i {
+    font-size: 0.4em;
+    margin: 0 0 10px 0;
+    display: inline;
+    position: relative;
+}
+.gallery-block.cards-gallery .card-body p {
+    font-size: 1em; 
+    color: #1b1b1b !important;
+}
+
+.gallery-block.cards-gallery a {
+    color: #3a3a3a;
+    font-weight: 800;
+}
+.gallery-block.cards-gallery a span {
+	color: #e5e5e5;
+	font-weight: 400;
+}
+
+.gallery-block.cards-gallery a:hover {
+    text-decoration: none; 
+}
+
+.gallery-block.cards-gallery .card {
+    margin-bottom: 30px; 
+}
+/* END special CSS for baguetteBox gallery */
+
+/* about me */
+#about {
+	width: 100%;
+	min-height: 400px;
+	background: #1b1b1b;
+}
+	#about-wrap {
+		display: flex;
+	}
+		#about-left {
+			width: 30%;
+			background: url(../img/oldme.jpg);
+			background-size: cover;
+			min-height: 500px;
+		}
+		#about-right {
+			width: 70%;
+			padding: 4em;
+		}
+			#about-right h1 {
+				color: #cecece;
+				font-size: 2em;
+				font-weight: 600;
+				padding: 0 0 5px 0;
+			}
+			#about-right p {
+				width: 70%;
+			}
+.strike {
+	text-decoration: line-through;
+}
+
+/* contact */
+#contact {
+	background: #ed4949;
+	min-height: 500px;
+}
+	#contact-wrap {
+		display: flex;
+	}
+		#contact-left h1 {
+			font-size: 2em;
+			color: #fefefe;
+			font-weight: 600;
+		}
+		#contact-left h5 {
+			font-size: .7em;
+			font-weight: 800;
+			color: #fce3e3;
+			margin: 1em 0 0 0;
+		}
+
+		#contact-left {
+			padding: 4em 2em;
+			width: 30%;
+		}
+			#contact-left div {
+				width: 60px;
+				height: 5px;
+				background: #1b1b1b;
+				margin: 5px 0 15px 0;
+			}
+			#contact-left ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+				#contact-left li input, #contact-left li textarea {
+					margin: 0 0 10px 0;
+					padding: 5px;
+					font-size: 1em;
+					border: 0;
+					outline: 0;
+					width: 100%;
+					background: #ed4949;
+					border: 2px solid #fce3e3;
+					color: #fce3e3;
+					font-weight: 600;
+					border-radius: 2px;
+					transition: all .2s ease-in-out;
+				}
+					#contact-left li:nth-child(2n) {
+						margin: 0 0 1em 0;
+					}
+					#contact-left li textarea {
+						resize: none;
+						height: 200px;
+					}
+					#contact-left li label {
+						font-weight: 800;
+						font-size: 1.2em;
+						color: #fbc0c0;
+						cursor: pointer;
+						transition: all .2s ease-in-out;
+					}
+						#contact-left li input[type=submit] {
+							width: 30%;
+							background: #fce3e3;
+							color: #ed4949;
+							font-weight: 800;
+						}
+							#contact-left li input[type=submit]:hover {
+								background: #fff;
+							}
+						#contact-left li input:hover,
+						#contact-left li input:focus {
+							border: 2px solid #fff;
+						}
+						#contact-left li label:hover {
+							color: #fff;
+						}
+	#contact-right {
+		width: 70%;
+		background-image: url(../img/viumap.png);
+		background-size: cover;
+		/*opacity: 0.2;*/
+	}
+		#map {
+			height: 100%;
+			width: 100%;
+		}
+
+	footer {
+		min-height: 300px;
+		background: #cecece;
+	}
+		#footer-wrap {
+			max-width: 1140px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			padding: 4em 0;
+		}
+			#footer-wrap section {
+				width: 33%;
+			}
+		footer section h1 {
+			font-size: 2em;
+			font-weight: 600;
+			margin: 0 0 13px 0;
+		}
+			footer section ul {
+				margin: 15px 0 0 0;
+				padding: 0;
+				list-style-type: none;
+			}
+				footer section li a {
+					font-weight: 800;
+					color: #1b1b1b;
+					display: block;
+					transition: all .2s ease-in-out;
+				}
+					footer section li a:hover {
+						color: #ed4949;
+					}
+					footer section li {
+						height: 30px;
+						line-height: 30px;
+					}
+					footer section li div {
+						width: 30px;
+						display: inline-block;
+					}
+						footer section li div img {
+							border-radius: 25px;
+						}
+		#sub-footer {
+			background: #1b1b1b;
+			padding: 2em;
+		}
+			#sub-footer p {
+				text-align: center;
+				color: #858585;
+				margin: 0;
+				padding: 0;
+			}
+
+#map {
+	height: 100%;
+	width: 100%;
+}
+
+
+/* mobile */
+@media (max-width: 1280px) { /* start padding before 1140px to prevent snapping */
+	header {
+		padding: 0em 1em;
+		background: #1b1b1b;
+	}
+	#feat {
+		padding: 10em 2em;
+	}
+	#about-left, #contact-left { width: 50%; }
+	#about-right, #contact-right { width: 50%; }
+}
+@media (max-width: 800px) {
+	header { display: block; }
+	header div, nav {
+		width: 100%;
+		display: block;
+		text-align: left;
+	}
+	#feat {
+		padding: 0 2em;
+		display: block;
+	}
+		.feat-item {
+			display: block;
+			width: 100%;
+			padding: 2em 0;
+		}
+	#feat i {
+		display: none;
+	}
+	#about-left, #contact-right { display: none; }
+	#about-right, #contact-left { width: 100%; }
+	#footer-wrap {
+		display: block;
+	}
+		#footer-wrap section {
+			display: block;
+			width: 100%;
+			overflow: hidden;
+			padding: 0 0 4em 4em;
+		}
+}

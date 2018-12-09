@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>404'd - ed3n.me</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="img/icon.png">
+        <link rel="icon" href="img/icon.png" type="image/png">
+        <link rel="shortcut icon" href="img/icon.png" type="image/png"> 
+        <!-- Place favicon.ico in the root directory -->
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">  
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+        <script src="../lib/jquery-3.3.1.js"></script>
+        <script src="../lib/bootstrap/js/bootstrap.js"></script>
+
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+
+        <style>
+            * { font-family: "Nunito", sans-serif; font-weight: 800; }
+            h1 { margin: 2em 0 0 0; text-align: center; font-size: 10em; color: #ed4949; }
+            h2 { text-align: center; color: #1b1b1b; margin: 0 0 1em 0; }
+            a { text-decoration: none; color: #ed4949; }
+        </style> 
+    </head>
+    <body>
+        <h1>404'd</h1>
+        <h2 id="quotes"></h2>
+        <h2><a href="index.html"><i class="fas fa-arrow-circle-left"></i> Let's go back</a></h2>
+
+        <script>
+                function shuffle(a) {
+                    for (let i = a.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [a[i], a[j]] = [a[j], a[i]];
+                    }
+                    return a;
+                }
+
+                var quotes = [
+                    "I dont know what you're looking for, but it's not here.",
+                    "Whatever you were trying to find, it isn't here.",
+                    "Mmm nope, that's not here.",
+                    "What? Is that supposed to be here?",
+                    "Well that's a mystery isn't it?"    
+                ];
+
+                shuffle(quotes);
+                document.getElementById("quotes").innerHTML = quotes.slice(0,1).toString();
+
+    </script>
+    </body>
+</html>
+
